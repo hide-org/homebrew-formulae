@@ -20,7 +20,7 @@ class Hide < Formula
     pid = fork do
       $stdout.reopen(write)
       $stderr.reopen(write)
-      exec "#{bin}/hide"
+      exec bin/"hide"
     end
 
     write.close
