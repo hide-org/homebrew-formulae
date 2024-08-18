@@ -6,7 +6,9 @@ class Hide < Formula
   license "MIT"
 
   depends_on "go" => :build
-  depends_on "docker"
+  depends_on "gopls"
+  depends_on "pyright"
+  depends_on "typescript-language-server"
 
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/hide"
@@ -18,7 +20,7 @@ class Hide < Formula
     pid = fork do
       $stdout.reopen(write)
       $stderr.reopen(write)
-      exec "#{bin}/hide"
+      exec bin/"hide"
     end
 
     write.close
