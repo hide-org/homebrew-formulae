@@ -1,8 +1,8 @@
 class Hide < Formula
   desc "Headless IDE for AI agents"
   homepage "https://hide.sh"
-  url "https://github.com/artmoskvin/hide/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "be278de34e0a58d513aaec6e1d1c543c59def0d5cdcdd66207d9fcce1ee2e4cc"
+  url "https://github.com/artmoskvin/hide/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "a0fbfb8b7bf05b05b508c7b34b7bad78a3173b86de2a22ecc1797e369b0e28f8"
   license "MIT"
 
   depends_on "go" => :build
@@ -11,7 +11,7 @@ class Hide < Formula
   depends_on "typescript-language-server"
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/hide"
+    system "go", "build", *std_go_args(ldflags: "-s -w"), "."
   end
 
   test do
@@ -29,7 +29,7 @@ class Hide < Formula
 
     begin
       output = read.read_nonblock(4096)
-      assert_match "Server started on :8080", output
+      assert_match "headless IDE for coding agents", output
     rescue IO::WaitReadable
       read.wait_readable(1)
       retry
