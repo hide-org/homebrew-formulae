@@ -2,14 +2,14 @@
 
 ## How do I install these formulae?
 
-`brew install artmoskvin/hide/<formula>`
+`brew install hide-org/formulae/<formula>`
 
-Or `brew tap artmoskvin/hide` and then `brew install <formula>`.
+Or `brew tap hide-org/formulae` and then `brew install <formula>`.
 
 Or, in a [`brew bundle`](https://github.com/Homebrew/homebrew-bundle) `Brewfile`:
 
 ```ruby
-tap "artmoskvin/hide"
+tap "hide-org/formulae"
 brew "<formula>"
 ```
 
