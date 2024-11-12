@@ -1,8 +1,8 @@
 class Hide < Formula
   desc "Headless IDE for AI agents"
   homepage "https://hide.sh"
-  url "https://github.com/hide-org/hide/releases/download/v0.4.1/hide-0.4.1.tar.gz"
-  sha256 "0e39e62a64fc7f89e14ff3196350523809ccde11fb807b2ca102a9631edc58ce"
+  url "https://github.com/hide-org/hide/releases/download/v0.5.0/hide-0.5.0.tar.gz"
+  sha256 "0ba7a5aa4ad5074589aec27cea1d5c433e62963bff50e0798ededa89be4c5957"
   license "MIT"
 
   depends_on "go" => :build
